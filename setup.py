@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='local_connector',
-    version='0.44',
+    version='0.1.1',
     description='Connector to MySQL on localhost',
     author='Radek Miernicki',
     author_email='radek.miernicki@gmail.com',

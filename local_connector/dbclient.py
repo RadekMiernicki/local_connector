@@ -1,6 +1,7 @@
 from .dbconnector import Connector, Error
 
 class Client:
+    debug = False
     def __init__(self, db_config):
         self.connector = Connector(db_config = db_config)
         
@@ -28,7 +29,8 @@ class Client:
         try:
             self.cur.execute(statement)
             self.conn.commit()
-            print('Statement was commited successfuly.')
+            if self.debug:
+                print('Statement was commited successfuly.')
         
         except Error as err:
             print(f'Error no: {err.errno}')
@@ -44,7 +46,8 @@ class Client:
         try:
             self.cur.execute(statement, *variable)
             self.conn.commit()
-            print('Statement was commited successfuly.')
+            if self.debug:
+                print('Statement was commited successfuly.')
         
         except Error as err:
             print(f'Error no: {err.errno}')
