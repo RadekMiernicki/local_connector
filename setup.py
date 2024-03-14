@@ -7,6 +7,6 @@ setup(
     author='Radek Miernicki',
     author_email='radek.miernicki@gmail.com',
     packages=['local_connector'],  # same as name
-    install_requires=['mysql.connector'], # external packages as dependencies
+    install_requires=['mysql-connector-python','pandas'], # external packages as dependencies
 )
 
